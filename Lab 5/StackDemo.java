@@ -10,29 +10,26 @@ class Stack
 	public void push(int n)
 	{
 		System.out.println();
-		if(top == 9)
+		if(top == arr.length - 1)
 		System.out.println("Stack Overflow");
 		else
 		{
 			arr[++top] = n;
 			System.out.println(n + " was added to the stack");
 		}
-		System.out.println();
 	}
 	public int pop()
 	{
 		System.out.println();
 		if(top==-1){
 			System.out.println("Stack Underflow");
-			System.out.println();
 			return -1;
 		}
 		else
 		{
 			int num = arr[top];
 			top--;
-			System.out.println(num + " was removed the stack");
-			System.out.println();
+			System.out.println(num + " was removed from the stack");
 			return num;
 		}
 	}
@@ -44,7 +41,6 @@ class Stack
 		{
 			System.out.println(arr[i]);
 		}
-		System.out.println();
 	}
 }
 class StackDemo
@@ -55,17 +51,18 @@ class StackDemo
 		System.out.println("Enter size of stack");
 		int size = sc.nextInt();
 		Stack st = new Stack(size);
-		System.out.println("Press 1 to push, 2 to pop, 3 to display and 4 to exit");
-		int n = sc.nextInt();
+		int n;
 		//st.push(5);
 		//st.push(10);
 		//st.displayStack();
 		//st.pop();
-		while(n!=4)
+		while(true)
 		{
-			System.out.println();
+			System.out.println("Press 1 to push, 2 to pop, 3 to display and 4 to exit");
+			n = sc.nextInt();
 			if(n==1)
 			{
+				System.out.println();
 				System.out.println("Enter number to push");
 				int num = sc.nextInt();
 				st.push(num);
@@ -82,10 +79,9 @@ class StackDemo
 			{
 				System.out.println();
 				System.out.println("Exiting...");
+				System.out.println();
 				break;
 			}
-			System.out.println("Press 1 to push, 2 to pop, 3 to display and 4 to exit");
-			n = sc.nextInt();
 			System.out.println();
 		}
 	}
