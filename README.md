@@ -8,3 +8,4 @@ All the labsheets covered in class are listed below:<br/>
 - [Labsheet-5](https://github.com/soppydart/CS-F213-Lab/files/9949017/Labsheet-5.AWT.pdf)
 - [Labsheet-6](https://github.com/soppydart/CS-F213-Lab/files/9949018/Labsheet-6.pdf)
 - [Labsheet-7](https://github.com/soppydart/CS-F213-Lab/files/9949019/Labsheet-7.pdf)
+- [Labsheet-8](https://github.com/soppydart/CS-F213-Lab/files/10004970/OOP.Labsheet-8.pdf)
