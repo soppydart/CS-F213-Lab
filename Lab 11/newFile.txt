@@ -1,0 +1,1 @@
+This text will be overwritten when 'FileDemo2' is used to copy from 'test.txt' to this file
