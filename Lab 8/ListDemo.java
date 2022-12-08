@@ -24,7 +24,6 @@ class DLL
 	}
 	void append(int n)
 	{
-		System.out.println();
 		Node ptr = new Node(n);
 		tail.next = ptr;
 		ptr.prev = tail;
@@ -38,7 +37,7 @@ class DLL
 			ptr = ptr.next;
 			index--;
 		}
-		if(index != 0)
+		if(index != 0 || (index ==0 && ptr == null))
 		{
 			System.out.println();
 			System.out.println("Invalid index");
@@ -59,6 +58,12 @@ class DLL
 	}
 	void delete(int index)
 	{
+		if(head.next == null && index == 0)
+		{
+			System.out.println();
+			System.out.println("Empty list");
+			return;
+		}
 		index++;
 		Node ptr = head;
 		while(index!=0 && ptr!=null)
@@ -66,7 +71,7 @@ class DLL
 			index--;
 			ptr = ptr.next;
 		}
-		if(index != 0)
+		if(index != 0 || (index ==0 && ptr == null))
 		{
 			System.out.println();
 			System.out.println("Invalid index");
@@ -91,7 +96,7 @@ class DLL
 	}
 	void search(int x)
 	{
-		Node ptr = head;
+		Node ptr = head.next;
 		boolean flag = false;
 		while(ptr != null)
 		{
@@ -129,7 +134,8 @@ class ListDemo
 		d.append(10);
 		d.append(15);
 		d.printList();
-		d.insert(9,1);		
+		d.insert(9,1);
+		d.insert(22,8);		
 		d.printList();
 		d.delete(1);		
 		d.printList();
